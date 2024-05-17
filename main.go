@@ -1,20 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
-func fizzBuzzNormal(n int) {
+func fizzBuzzNormal(n int) string {
 
 	if n%3 == 0 && n%5 == 0 {
-		fmt.Println("FizzBuzz")
+		return "FizzBuzz"
 	} else if n%3 == 0 {
-		fmt.Println("Fizz")
+		return "Fizz"
 	} else if n%5 == 0 {
-		fmt.Println("Buzz")
+		return "Buzz"
 	} else {
-		fmt.Println(n)
+		return strconv.Itoa(n)
 	}
 }
 
 func main() {
-	fizzBuzzNormal(20)
+	fmt.Println(fizzBuzzNormal(20))
 }
