@@ -24,6 +24,11 @@ func Test_fizzBuzzNormal(t *testing.T) {
 			args: 30,
 			want: "FizzBuzz",
 		},
+		{
+			name: "case number",
+			args: 2,
+			want: "2",
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -55,6 +60,11 @@ func Test_fizbuzz1if(t *testing.T) {
 			name: "case fizzbuzz",
 			args: args{60},
 			want: "FizzBuzz",
+		},
+		{
+			name: "case number",
+			args: args{2},
+			want: "2",
 		},
 	}
 	for _, tt := range tests {
