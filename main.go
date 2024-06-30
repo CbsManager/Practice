@@ -26,7 +26,28 @@ func fizbuzz1if(n int) string {
 	return strconv.Itoa(n)
 }
 
+func fizznoif(n int) string {
+	Fizz := map[bool]string{
+		true:  "Fizz",
+		false: "",
+	}
+
+	Buzz := map[bool]string{
+		true:  "Buzz",
+		false: "",
+	}
+
+	num := map[bool]string{
+		true:  strconv.Itoa(n),
+		false: "",
+	}
+
+	return Fizz[n%3 == 0] + Buzz[n%5 == 0] + num[n%3 != 0 && n%5 != 0]
+}
+
 func main() {
 	fmt.Println(fizzBuzzNormal(20))
-	fmt.Println(fizbuzz1if(3))
+	fmt.Println(fizbuzz1if(1))
+	fmt.Println(fizznoif(5))
+	fmt.Println(RomanToNumber("XXI"))
 }
