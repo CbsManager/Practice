@@ -132,6 +132,7 @@ func Test_romantonumber(t *testing.T) {
 		{name: "case 10", args: "X", want: 10},
 		{name: "case 11", args: "XI", want: 11},
 		{name: "case 12", args: "XII", want: 12},
+		{name: "case 13", args: "XIII", want: 13},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
